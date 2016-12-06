@@ -58,6 +58,7 @@ window.addEventListener "orientationchange", (->
   setTimeout (->
     OT.updateViews()
     return
-  ), 1000
+  ), 50
   return
 ), false
+
