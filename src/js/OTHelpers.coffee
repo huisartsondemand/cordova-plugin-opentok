@@ -92,8 +92,8 @@ TBGenerateDomHelper = ->
 TBGetZIndex = (ele) ->
   while( ele? )
     val = document.defaultView.getComputedStyle(ele,null).getPropertyValue('z-index')
-    # console.log val
-    if ( parseInt(val) )
+
+    if ( val == "0" || parseInt(val) )
       return val
     ele = ele.offsetParent
   return 0

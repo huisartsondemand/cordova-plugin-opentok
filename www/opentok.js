@@ -257,7 +257,7 @@ TBGetZIndex = function(ele) {
   var val;
   while ((ele != null)) {
     val = document.defaultView.getComputedStyle(ele, null).getPropertyValue('z-index');
-    if (parseInt(val)) {
+    if (val === "0" || parseInt(val)) {
       return val;
     }
     ele = ele.offsetParent;
