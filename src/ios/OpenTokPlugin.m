@@ -330,6 +330,8 @@
     sub.view.layer.cornerRadius = borderRadius;
     sub.view.clipsToBounds = borderRadius ? YES : NO;
     [self.webView.superview addSubview:sub.view];
+    // Default to Fit makes more sense
+    sub.viewScaleBehavior = OTVideoViewScaleBehaviorFit;
     
     if (error) {
         NSLog(@"Session.subscribe failed: %@", [error localizedDescription]);
