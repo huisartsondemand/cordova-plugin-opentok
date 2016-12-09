@@ -184,7 +184,7 @@ getPosition = function(divName) {
     curleft += pubDiv.offsetLeft + transform.m41;
     curtop += pubDiv.offsetTop + transform.m42;
   }
-  if (StatusBar && StatusBar.isVisible) {
+  if (window.StatusBar && StatusBar.isVisible) {
     curtop += 20;
   }
   marginTop = parseInt(computedStyle.marginTop) || 0;
