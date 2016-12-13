@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 module.exports = function (context) {
-    var IosSDKVersion = 'OpenTok-iOS-2.8.1';
+    var IosSDKVersion = 'OpenTok-iOS-2.9.2';
     var fs = require('fs');
     var downloadFile = require('./downloadFile.js'),
         exec = require('./exec/exec.js'),
@@ -16,7 +16,7 @@ module.exports = function (context) {
             return;
         }
         console.log('Downloading OpenTok iOS SDK');
-        downloadFile('https://s3.amazonaws.com/artifact.tokbox.com/rel/ios-sdk/' + IosSDKVersion + '.tar.bz2',
+        downloadFile('https://tokbox.com/downloads/' + IosSDKVersion + '.tar.bz2',
             './' + IosSDKVersion + '.tar.bz2', function (err) {
             if (!err) {
                 console.log('downloaded');
